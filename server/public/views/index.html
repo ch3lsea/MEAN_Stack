@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head lang="en">
+		<meta charset="utf-8">
+		<title>MEAN Stack</title>
+		<meta name="MEAN Stack" content="Webpage">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src='/vendor/angular/angular.min.js' type="text/javascript"></script>
+		<script src="/assets/scripts/app.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link href="/views/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class="pageTitle">MEAN Stack App</h1>
+			</div>
+		</div>
+		<div ng-controller="IndexController">
+			<p ng-show="cat.name">Your new cats name is: {{ cat.name }}</p>
+			<p ng-hide="cat.name">Enter your new cat's name!</p>
+
+			<form novalidate>
+				Name: <input type="text" ng-model="cat.name" /><br />
+				<input type="submit" ng-click="add(cat)" value="Save"/>
+			</form>
+
+			<h4>Cats</h4>
+			<ul>
+				<li ng-repeat="cat in cats">{{ cat.name }}</li>
+			</ul>
+		</div>
+
+		<!--Scripts-->
+
+		<!--Scripts-->
+	</body>
+</html>
