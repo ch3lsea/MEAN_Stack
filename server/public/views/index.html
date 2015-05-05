@@ -5,6 +5,7 @@
 		<title>MEAN Stack</title>
 		<meta name="MEAN Stack" content="Webpage">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Indie+Flower|Bree+Serif' rel='stylesheet' type='text/css'>
 		<script src='/vendor/angular/angular.min.js' type="text/javascript"></script>
 		<script src="/assets/scripts/app.min.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -13,23 +14,31 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="jumbotron">
-				<h1 class="pageTitle">MEAN Stack App</h1>
+			<div class="jumbotron text-center">
+				<h1 class="pageTitle">MEAN Stack Cat Name App</h1>
+				<p>This app uses the fullstack JavaScript framework, MEAN (Mongo Express Angular.js Node.js), to store data you enter in a database and display it on the DOM in real time. Enter in a cat name below to see it work.</p>
 			</div>
 		</div>
-		<div ng-controller="IndexController">
-			<p ng-show="cat.name">Your new cats name is: {{ cat.name }}</p>
-			<p ng-hide="cat.name">Enter your new cat's name!</p>
+		<div class="col-md-8 col-md-offset-2 text-center">
+			<h3 class="watch">As you are entering your cat name, watch the paragraph above the entry area change</h3>
+		</div>
+		<div class="container">
+			<div class="col-md-8 col-md-offset-2 text-center indexCont">
+				<div ng-controller="IndexController">
+					<h4 ng-show="cat.name">Your new cat's name is: {{ cat.name }}</h4>
+					<h4 ng-hide="cat.name">Enter your new cat's name!</h4>
 
-			<form novalidate>
-				Name: <input type="text" ng-model="cat.name" /><br />
-				<input type="submit" ng-click="add(cat)" value="Save"/>
-			</form>
-
-			<h4>Cats</h4>
-			<ul>
-				<li ng-repeat="cat in cats">{{ cat.name }}</li>
-			</ul>
+					<form novalidate>
+						Name: <input class="userInput" type="text" ng-model="cat.name" /><input class="submit" type="submit" ng-click="add(cat)" value="Save"/>
+					</form>
+					<div id="wrapper" class="col-md-offset-5">
+						<h3>Cats</h3>
+						<ul>
+							<li ng-repeat="cat in cats">{{ cat.name }}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!--Scripts-->

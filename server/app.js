@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+app.use(bodyParser.json());
+
 var index = require('./routes/index');
 app.use("/", index);
 
@@ -9,6 +11,4 @@ var server = app.listen(3000, function() {
     console.log("Listening on port: ", port);
 });
 
-app.use(bodyParser.json());
-app.use('/', index);
 module.exports = app;
