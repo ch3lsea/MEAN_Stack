@@ -1,0 +1,37 @@
+body {
+    background-color: #171A24;
+    font-family: 'Bree Serif', serif;
+}
+
+.jumbotron {
+    background-color: #B8A393;
+    color: #29303E;
+}
+
+.watch {
+    color: #EED3BE;
+    margin-bottom: 30px;
+}
+
+.indexCont {
+    background-color: #29303E;
+    color: #EED3BE;
+    border-radius: 5px;
+}
+
+.submit, .userInput {
+    color: #000;
+}
+
+form {
+    font-size: 20px;
+}
+
+#wrapper {
+    text-align: left;
+}
+
+#wrapper li {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+}
